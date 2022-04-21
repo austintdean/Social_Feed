@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import DisplayEntries from './Components/DisplayEntries/DisplayEntries';
+
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    const [entries, setEntries] = useState([{name : "JJ V.", post: "I have a sense of humor!"  }, {name : "Megan C.", post: "Kirby is where it is at!"  }])
+
+
+    return (
+    <div>
+        <DisplayEntries parentEntries={entries}/>
+
     </div>
-  );
+)
 }
 
 export default App;
