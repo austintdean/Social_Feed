@@ -8,9 +8,9 @@ const DisplayEntries = (props) => {
                 </tr>
             </thead>
             <tbody>
-                {props.parentEntries.map((entry) => {
+                {props.parentEntries.map((entry, index) => {
                     return (
-                        <tr>
+                        <tr key = {index + 1}>
                             <td><h4>{entry.name}</h4></td>
                             <td>{entry.post}</td> 
                         </tr>
@@ -18,6 +18,9 @@ const DisplayEntries = (props) => {
                     );
                 })}
             </tbody>
+            <tfoot>
+
+            </tfoot>
         </table>
 
         );
