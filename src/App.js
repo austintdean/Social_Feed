@@ -24,7 +24,7 @@ function App() {
         <AddEntryForm AddNewEntryProperty={addNewEntry}/>
 
     </div>
-)
+    )
 }
 
 export default App;

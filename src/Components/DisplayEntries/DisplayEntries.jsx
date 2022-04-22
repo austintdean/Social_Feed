@@ -1,3 +1,5 @@
+import LikeToggle from "../LikeToggle/LikeToggle";
+import DislikeToggle from "../DislikeToggle/DislikeToggle";
 
 const DisplayEntries = (props) => {
     return (  
@@ -13,13 +15,16 @@ const DisplayEntries = (props) => {
                         <tr key = {index + 1}>
                             <td><h4>{entry.name}</h4></td>
                             <td>{entry.post}</td> 
+                            <td> <LikeToggle /></td>
+                            <td><DislikeToggle /></td>
+
+
                         </tr>
                         
                     );
                 })}
             </tbody>
             <tfoot>
-
             </tfoot>
         </table>
 
