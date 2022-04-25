@@ -1,9 +1,10 @@
 import LikeToggle from "../LikeToggle/LikeToggle";
 import DislikeToggle from "../DislikeToggle/DislikeToggle";
+import './DisplayEntries.css'
 
 const DisplayEntries = (props) => {
     return (  
-        <table>
+        <table className="table">
             <thead>
                 <tr>
                     <th>Social Post</th>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import DisplayEntries from './Components/DisplayEntries/DisplayEntries';
 import AddEntryForm from './Components/AddEntry/AddEntryForm';
-
+import "./App.css"
 
 
 function App() {
@@ -19,12 +19,25 @@ function App() {
 
     }
     return (
-    <div>
-        <DisplayEntries parentEntries={entries}/>
-        <AddEntryForm AddNewEntryProperty={addNewEntry}/>
+    <div className='d-flex justify-content-start'>
+    <div className='container-fluid'>
+        <div className='column'>
+            <div className='mainEntrycontainer'>
+                <div className='border-box'>
+                <AddEntryForm AddNewEntryProperty={addNewEntry}/>
+                </div>
+            </div>
+            <div className='mainEntrycontainer'>
+                <div className='border-box'>
+                <DisplayEntries parentEntries={entries}/>
+                </div>        
+            </div>
 
+        </div>
     </div>
-    )
+     
+    </div>
+   )   
 }
 
 export default App;
